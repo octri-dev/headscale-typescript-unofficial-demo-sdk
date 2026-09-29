@@ -1,0 +1,6171 @@
+{
+  "schemaTitle": "Headscale API",
+  "schemaVersion": "v1",
+  "language": "typescript",
+  "enumStrategy": "open",
+  "unitTests": "include",
+  "operations": [
+    {
+      "id": "authApprove",
+      "wireOperationId": "authApprove",
+      "method": "post",
+      "path": "/api/v1/auth/approve",
+      "namespace": ["auth"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "authApprove"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthApproveRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthApproveRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "authId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthApproveOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthApproveOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "authRegister",
+      "wireOperationId": "authRegister",
+      "method": "post",
+      "path": "/api/v1/auth/register",
+      "namespace": ["auth"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "authRegister"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthRegisterRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthRegisterRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "authId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "user",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthRegisterOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthRegisterOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "authReject",
+      "wireOperationId": "authReject",
+      "method": "post",
+      "path": "/api/v1/auth/reject",
+      "namespace": ["auth"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "authReject"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthRejectRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthRejectRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "authId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/AuthRejectOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "AuthRejectOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "authId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "backfillNodeIps",
+      "wireOperationId": "backfillNodeIPs",
+      "method": "post",
+      "path": "/api/v1/node/backfillips",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "backfillNodeIPs"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/BackfillNodeIPsOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "BackfillNodeIPsOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "confirmed",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "confirmed",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "checkPolicy",
+      "wireOperationId": "checkPolicy",
+      "method": "post",
+      "path": "/api/v1/policy/check",
+      "namespace": ["policy"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "checkPolicy"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/PolicyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "PolicyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "policy",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/CheckPolicyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CheckPolicyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "policy",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "policy",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "createApiKey",
+      "wireOperationId": "createApiKey",
+      "method": "post",
+      "path": "/api/v1/apikey",
+      "namespace": ["apiKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "createApiKey"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/CreateApiKeyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CreateApiKeyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "expiration",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/CreateApiKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CreateApiKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "expiration",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "expiration",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "createPreAuthKey",
+      "wireOperationId": "createPreAuthKey",
+      "method": "post",
+      "path": "/api/v1/preauthkey",
+      "namespace": ["preAuthKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "createPreAuthKey"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/CreatePreAuthKeyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CreatePreAuthKeyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "aclTags",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "ephemeral",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "expiration",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "reusable",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "user",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/PreAuthKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "PreAuthKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "aclTags",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "ephemeral",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "expiration",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "reusable",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "aclTags",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "ephemeral",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "expiration",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "reusable",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "createUser",
+      "wireOperationId": "createUser",
+      "method": "post",
+      "path": "/api/v1/user",
+      "namespace": ["users"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "createUser"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/CreateUserRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CreateUserRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "displayName",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "email",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "name",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "pictureUrl",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/UserOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "UserOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "displayName",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "email",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "name",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "pictureUrl",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "displayName",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "email",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "name",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "pictureUrl",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "debugCreateNode",
+      "wireOperationId": "debugCreateNode",
+      "method": "post",
+      "path": "/api/v1/debug/node",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "debugCreateNode"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/DebugCreateNodeRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "DebugCreateNodeRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "key",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "name",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "routes",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "user",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "key",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "name",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "routes",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "key",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "name",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "routes",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "user",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "deleteApiKey",
+      "wireOperationId": "deleteApiKey",
+      "method": "delete",
+      "path": "/api/v1/apikey/{prefix}",
+      "namespace": ["apiKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "deleteApiKey"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/DeleteApiKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "DeleteApiKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "prefix",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "prefix",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "deleteNode",
+      "wireOperationId": "deleteNode",
+      "method": "delete",
+      "path": "/api/v1/node/{nodeId}",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "deleteNode"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/DeleteNodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "DeleteNodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "deletePreAuthKey",
+      "wireOperationId": "deletePreAuthKey",
+      "method": "delete",
+      "path": "/api/v1/preauthkey",
+      "namespace": ["preAuthKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "deletePreAuthKey"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/DeletePreAuthKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "DeletePreAuthKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "deleteUser",
+      "wireOperationId": "deleteUser",
+      "method": "delete",
+      "path": "/api/v1/user/{id}",
+      "namespace": ["users"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "deleteUser"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/DeleteUserOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "DeleteUserOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "expireApiKey",
+      "wireOperationId": "expireApiKey",
+      "method": "post",
+      "path": "/api/v1/apikey/expire",
+      "namespace": ["apiKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "expireApiKey"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/ExpireApiKeyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExpireApiKeyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "id",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "prefix",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ExpireApiKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExpireApiKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "prefix",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "prefix",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "expireNode",
+      "wireOperationId": "expireNode",
+      "method": "post",
+      "path": "/api/v1/node/{nodeId}/expire",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "expireNode"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/ExpireNodeRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExpireNodeRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "disableExpiry",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "expiry",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "disableExpiry",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "expiry",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "disableExpiry",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "expiry",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "expirePreAuthKey",
+      "wireOperationId": "expirePreAuthKey",
+      "method": "post",
+      "path": "/api/v1/preauthkey/expire",
+      "namespace": ["preAuthKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "expirePreAuthKey"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/ExpirePreAuthKeyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExpirePreAuthKeyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "id",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ExpirePreAuthKeyOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExpirePreAuthKeyOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "getNode",
+      "wireOperationId": "getNode",
+      "method": "get",
+      "path": "/api/v1/node/{nodeId}",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getNode"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "getPolicy",
+      "wireOperationId": "getPolicy",
+      "method": "get",
+      "path": "/api/v1/policy",
+      "namespace": ["policy"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getPolicy"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/PolicyResponseBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "PolicyResponseBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [],
+      "bindings": []
+    },
+    {
+      "id": "health",
+      "wireOperationId": "health",
+      "method": "get",
+      "path": "/api/v1/health",
+      "namespace": ["health"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "health"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/HealthResponseBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "HealthResponseBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [],
+      "bindings": []
+    },
+    {
+      "id": "listApiKeys",
+      "wireOperationId": "listApiKeys",
+      "method": "get",
+      "path": "/api/v1/apikey",
+      "namespace": ["apiKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "listApiKeys"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ListApiKeysOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ListApiKeysOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [],
+      "bindings": []
+    },
+    {
+      "id": "listNodes",
+      "wireOperationId": "listNodes",
+      "method": "get",
+      "path": "/api/v1/node",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "listNodes"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ListNodesOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ListNodesOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "user",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "user",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "listPreAuthKeys",
+      "wireOperationId": "listPreAuthKeys",
+      "method": "get",
+      "path": "/api/v1/preauthkey",
+      "namespace": ["preAuthKeys"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "listPreAuthKeys"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ListPreAuthKeysOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ListPreAuthKeysOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [],
+      "bindings": []
+    },
+    {
+      "id": "listUsers",
+      "wireOperationId": "listUsers",
+      "method": "get",
+      "path": "/api/v1/user",
+      "namespace": ["users"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "listUsers"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ListUsersOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ListUsersOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "email",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "name",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "email",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "registerNode",
+      "wireOperationId": "registerNode",
+      "method": "post",
+      "path": "/api/v1/node/register",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "registerNode"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "user",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "user",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        },
+        {
+          "name": "key",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "renameNode",
+      "wireOperationId": "renameNode",
+      "method": "post",
+      "path": "/api/v1/node/{nodeId}/rename/{newName}",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "renameNode"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "newName",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "newName",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "renameUser",
+      "wireOperationId": "renameUser",
+      "method": "post",
+      "path": "/api/v1/user/{oldId}/rename/{newName}",
+      "namespace": ["users"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "renameUser"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/UserOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "UserOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "newName",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "oldId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "oldId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "newName",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "setApprovedRoutes",
+      "wireOperationId": "setApprovedRoutes",
+      "method": "post",
+      "path": "/api/v1/node/{nodeId}/approve_routes",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "setApprovedRoutes"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/SetApprovedRoutesRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "SetApprovedRoutesRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "routes",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "routes",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "routes",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "setPolicy",
+      "wireOperationId": "setPolicy",
+      "method": "put",
+      "path": "/api/v1/policy",
+      "namespace": ["policy"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "setPolicy"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/PolicyRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "PolicyRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "policy",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/PolicyResponseBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "PolicyResponseBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "policy",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "policy",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "setTags",
+      "wireOperationId": "setTags",
+      "method": "post",
+      "path": "/api/v1/node/{nodeId}/tags",
+      "namespace": ["nodes"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "setTags"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/SetTagsRequestBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "SetTagsRequestBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "tags",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/NodeOutputBody",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "NodeOutputBody",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ErrorModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "tags",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "nodeId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "tags",
+          "in": "body",
+          "required": false,
+          "nullable": true,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "name": "ApiKey",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "createdAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiration",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "lastSeen",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "prefix",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "AuthApproveOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "AuthApproveRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "authId",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "AuthRegisterOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "node",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "Node",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "AuthRegisterRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "authId",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "AuthRejectOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "AuthRejectRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "authId",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "BackfillNodeIPsOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "changes",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "CheckPolicyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "CreateApiKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "apiKey",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "CreateApiKeyRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "expiration",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "CreatePreAuthKeyRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "aclTags",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "ephemeral",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiration",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "reusable",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": false,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "CreateUserRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "displayName",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "email",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "pictureUrl",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "DebugCreateNodeRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "key",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "routes",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "DeleteApiKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "DeleteNodeOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "DeletePreAuthKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "DeleteUserOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "ErrorDetail",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "location",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "message",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "value",
+          "required": false,
+          "type": "any",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ErrorModel",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "detail",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "errors",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "ErrorDetail",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "instance",
+          "required": false,
+          "type": "string",
+          "format": "uri",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": false,
+          "type": "integer",
+          "format": "int64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "type",
+          "required": false,
+          "type": "string",
+          "format": "uri",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ExpireApiKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "ExpireApiKeyRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "id",
+          "required": false,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "prefix",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ExpireNodeRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "disableExpiry",
+          "required": false,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiry",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ExpirePreAuthKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "ExpirePreAuthKeyRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "id",
+          "required": false,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "HealthResponseBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "databaseConnectivity",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ListApiKeysOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "apiKeys",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "ApiKey",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ListNodesOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "nodes",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "Node",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ListPreAuthKeysOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "preAuthKeys",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "PreAuthKey",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ListUsersOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "users",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "ref",
+            "format": null,
+            "ref": "User",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "Node",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "approvedRoutes",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "availableRoutes",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "createdAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "discoKey",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiry",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "givenName",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "ipAddresses",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "lastSeen",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "machineKey",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "nodeKey",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "online",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "preAuthKey",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "NodePreAuthKey",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "registerMethod",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "subnetRoutes",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "tags",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "User",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "NodeOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "node",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "Node",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "NodePreAuthKey",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "aclTags",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "createdAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "ephemeral",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiration",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "key",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "reusable",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "used",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "User",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "PolicyRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "policy",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "PolicyResponseBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "policy",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "updatedAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "PreAuthKey",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "aclTags",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "createdAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "ephemeral",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "expiration",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "key",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "reusable",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "used",
+          "required": true,
+          "type": "boolean",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "user",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "User",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "PreAuthKeyOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "preAuthKey",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "PreAuthKey",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "SetApprovedRoutesRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "routes",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "SetTagsRequestBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "tags",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "User",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "createdAt",
+          "required": true,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "displayName",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "email",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": "uint64",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "profilePicUrl",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "provider",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "providerId",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "UserOutputBody",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "user",
+          "required": true,
+          "type": "ref",
+          "format": null,
+          "ref": "User",
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    }
+  ],
+  "transport": {
+    "engine": "fetch",
+    "implementation": "Fetch API"
+  },
+  "license": {
+    "identifier": "MIT",
+    "copyrightHolder": "SDK Authors",
+    "bundlesFullText": true
+  },
+  "versionFormat": {
+    "policy": "semver",
+    "normalizedVersion": "1.0.0"
+  },
+  "execution": {
+    "form": "native-async",
+    "mechanism": "promise",
+    "unconditional": true,
+    "syncCompanion": false
+  },
+  "documentation": {
+    "depth": "full",
+    "operations": [
+      {
+        "id": "authApprove",
+        "method": "post",
+        "path": "/api/v1/auth/approve",
+        "summary": "Approves a pending authentication session. Supply the session's `authId` to identify the request you want to approve. The response confirms the operation with an empty object.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "authRegister",
+        "method": "post",
+        "path": "/api/v1/auth/register",
+        "summary": "Registers a node through the authentication flow. Use `authId` to associate the registration with an authentication session and `user` to specify the user for the node. The response contains the registered node.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "authReject",
+        "method": "post",
+        "path": "/api/v1/auth/reject",
+        "summary": "Rejects a pending authentication session. Supply the session's `authId` to identify the request you want to reject. The response confirms the operation with an empty object.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "backfillNodeIPs",
+        "method": "post",
+        "path": "/api/v1/node/backfillips",
+        "summary": "Backfills IP addresses for registered nodes. Use the `confirmed` query parameter to indicate whether to confirm the operation, and review the returned `changes` list to see what was updated.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "confirmed",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "checkPolicy",
+        "method": "post",
+        "path": "/api/v1/policy/check",
+        "summary": "Validates a policy against the server's live users and nodes without saving it. Provide `policy` as a string when included; the request body is required.",
+        "description": "Validates the given policy against the server's live users and nodes without persisting it.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "createApiKey",
+        "method": "post",
+        "path": "/api/v1/apikey",
+        "summary": "Creates a new API key. You can provide `expiration` as a date-time value or omit it if you do not want to specify an expiration. The response contains the generated key in `apiKey`.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "createPreAuthKey",
+        "method": "post",
+        "path": "/api/v1/preauthkey",
+        "summary": "Creates a pre-auth key for a user. Configure the key with fields such as `user`, `expiration`, `reusable`, `ephemeral`, and `aclTags`; `user` is a uint64-formatted string and `expiration` is a date-time.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "createUser",
+        "method": "post",
+        "path": "/api/v1/user",
+        "summary": "Creates a user record. You can provide `name`, `displayName`, `email`, and `pictureUrl`; all defined fields are strings and none is marked as required.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "debugCreateNode",
+        "method": "post",
+        "path": "/api/v1/debug/node",
+        "summary": "Creates a node for debugging purposes. Provide `name` and `user` to describe the node, and use `key` or `routes` when those values are needed for the test setup. The response contains the created node.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "deleteApiKey",
+        "method": "delete",
+        "path": "/api/v1/apikey/{prefix}",
+        "summary": "Deletes an API key selected by its prefix. You can also supply `id` as a uint64-formatted string to further identify the key. The response confirms the operation with an empty object.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "prefix",
+            "in": "path",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "deleteNode",
+        "method": "delete",
+        "path": "/api/v1/node/{nodeId}",
+        "summary": "Deletes a node identified by its ID. Supply `nodeId` as an unsigned 64-bit integer value to identify the node to remove.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "deletePreAuthKey",
+        "method": "delete",
+        "path": "/api/v1/preauthkey",
+        "summary": "Deletes a pre-auth key. Use the optional `id` query parameter to identify the key to delete; provide it as a uint64-formatted string when supplied.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "deleteUser",
+        "method": "delete",
+        "path": "/api/v1/user/{id}",
+        "summary": "Deletes a user by identifier. Provide the user's `id` as a uint64-formatted string in the path.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "expireApiKey",
+        "method": "post",
+        "path": "/api/v1/apikey/expire",
+        "summary": "Expires an API key. Identify the key using `id`, `prefix`, or both, according to the key details available to you. The response confirms the operation with an empty object.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "expireNode",
+        "method": "post",
+        "path": "/api/v1/node/{nodeId}/expire",
+        "summary": "Updates the expiry settings for a node. Supply `expiry` as an ISO 8601 date-time or use `disableExpiry` to specify whether expiry is disabled.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "expirePreAuthKey",
+        "method": "post",
+        "path": "/api/v1/preauthkey/expire",
+        "summary": "Expires a pre-auth key. Supply its identifier in the `id` field as a uint64-formatted string when specifying which key to expire.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "getNode",
+        "method": "get",
+        "path": "/api/v1/node/{nodeId}",
+        "summary": "Retrieves a node by its identifier. Supply `nodeId` as an unsigned 64-bit integer value to identify the node.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getPolicy",
+        "method": "get",
+        "path": "/api/v1/policy",
+        "summary": "Retrieves the current policy. The response includes the policy text and the time it was last updated.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "health",
+        "method": "get",
+        "path": "/api/v1/health",
+        "summary": "Reports the server's health, including database connectivity. Read `databaseConnectivity` to determine whether the database connection is available.",
+        "description": "Reports server health, including database connectivity.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "listApiKeys",
+        "method": "get",
+        "path": "/api/v1/apikey",
+        "summary": "Lists the API keys available to the authenticated user. Review each key's identifier, prefix, expiration, creation time, and last-seen time to manage existing credentials.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "listNodes",
+        "method": "get",
+        "path": "/api/v1/node",
+        "summary": "Lists nodes managed by the service. Supply `user` to filter the results to nodes associated with that user; omit it to list nodes without a user filter.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "listPreAuthKeys",
+        "method": "get",
+        "path": "/api/v1/preauthkey",
+        "summary": "Lists the pre-auth keys configured on the server. Use this operation to retrieve each key's user, key value, expiration, usage state, and ACL tags.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "listUsers",
+        "method": "get",
+        "path": "/api/v1/user",
+        "summary": "Lists users, with optional filters for user identifier, name, or email. Supply `id` as a uint64-formatted string when filtering by identifier; `name` and `email` are string filters.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "registerNode",
+        "method": "post",
+        "path": "/api/v1/node/register",
+        "summary": "Registers a node and returns its node record. Use `user` to associate the node with a user and `key` to provide a registration key when needed.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "key",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "renameNode",
+        "method": "post",
+        "path": "/api/v1/node/{nodeId}/rename/{newName}",
+        "summary": "Renames a node by setting its new name. Supply the node identifier and the new name in the path.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "newName",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "renameUser",
+        "method": "post",
+        "path": "/api/v1/user/{oldId}/rename/{newName}",
+        "summary": "Renames a user by changing the name associated with the specified identifier. Provide `oldId` as a uint64-formatted string and `newName` as a string in the path.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "oldId",
+            "in": "path",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "newName",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "setApprovedRoutes",
+        "method": "post",
+        "path": "/api/v1/node/{nodeId}/approve_routes",
+        "summary": "Updates the approved routes for a node. Send the route values in the `routes` array to set which routes are approved for that node.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "setPolicy",
+        "method": "put",
+        "path": "/api/v1/policy",
+        "summary": "Replaces the current policy with the policy value supplied in the request body. Include the policy text in `policy`; the response provides the saved policy and its update time.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "setTags",
+        "method": "post",
+        "path": "/api/v1/node/{nodeId}/tags",
+        "summary": "Sets the tags for a node. Send the tags as an array of strings in the request body.",
+        "description": null,
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "nodeId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      }
+    ],
+    "models": [
+      {
+        "name": "ApiKey",
+        "kind": "model",
+        "description": "Typed representation of the `ApiKey` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "createdAt",
+            "description": "Required `date-time`-formatted value serialized in the `createdAt` wire field."
+          },
+          {
+            "name": "expiration",
+            "description": "Required `date-time`-formatted value serialized in the `expiration` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Required `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "lastSeen",
+            "description": "Required `date-time`-formatted value serialized in the `lastSeen` wire field."
+          },
+          {
+            "name": "prefix",
+            "description": "Required `string` value serialized in the `prefix` wire field."
+          }
+        ]
+      },
+      {
+        "name": "AuthApproveOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthApproveOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "AuthApproveRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthApproveRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "authId",
+            "description": "Optional `string` value serialized in the `authId` wire field."
+          }
+        ]
+      },
+      {
+        "name": "AuthRegisterOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthRegisterOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "node",
+            "description": "Required object value serialized in the `node` wire field."
+          }
+        ]
+      },
+      {
+        "name": "AuthRegisterRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthRegisterRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "authId",
+            "description": "Optional `string` value serialized in the `authId` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Optional `string` value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "AuthRejectOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthRejectOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "AuthRejectRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `AuthRejectRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "authId",
+            "description": "Optional `string` value serialized in the `authId` wire field."
+          }
+        ]
+      },
+      {
+        "name": "BackfillNodeIPsOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `BackfillNodeIPsOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "changes",
+            "description": "Required array value serialized in the `changes` wire field."
+          }
+        ]
+      },
+      {
+        "name": "CheckPolicyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `CheckPolicyOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "CreateApiKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `CreateApiKeyOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "apiKey",
+            "description": "Required `string` value serialized in the `apiKey` wire field."
+          }
+        ]
+      },
+      {
+        "name": "CreateApiKeyRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `CreateApiKeyRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "expiration",
+            "description": "Optional `date-time`-formatted value serialized in the `expiration` wire field."
+          }
+        ]
+      },
+      {
+        "name": "CreatePreAuthKeyRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `CreatePreAuthKeyRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "aclTags",
+            "description": "Optional array value serialized in the `aclTags` wire field."
+          },
+          {
+            "name": "ephemeral",
+            "description": "Optional `boolean` value serialized in the `ephemeral` wire field."
+          },
+          {
+            "name": "expiration",
+            "description": "Optional `date-time`-formatted value serialized in the `expiration` wire field."
+          },
+          {
+            "name": "reusable",
+            "description": "Optional `boolean` value serialized in the `reusable` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Optional `uint64`-formatted value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "CreateUserRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `CreateUserRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "displayName",
+            "description": "Optional `string` value serialized in the `displayName` wire field."
+          },
+          {
+            "name": "email",
+            "description": "Optional `string` value serialized in the `email` wire field."
+          },
+          {
+            "name": "name",
+            "description": "Optional `string` value serialized in the `name` wire field."
+          },
+          {
+            "name": "pictureUrl",
+            "description": "Optional `string` value serialized in the `pictureUrl` wire field."
+          }
+        ]
+      },
+      {
+        "name": "DebugCreateNodeRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `DebugCreateNodeRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "key",
+            "description": "Optional `string` value serialized in the `key` wire field."
+          },
+          {
+            "name": "name",
+            "description": "Optional `string` value serialized in the `name` wire field."
+          },
+          {
+            "name": "routes",
+            "description": "Optional array value serialized in the `routes` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Optional `string` value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "DeleteApiKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `DeleteApiKeyOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "DeleteNodeOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `DeleteNodeOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "DeletePreAuthKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `DeletePreAuthKeyOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "DeleteUserOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `DeleteUserOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "ErrorDetail",
+        "kind": "model",
+        "description": "Typed representation of the `ErrorDetail` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "location",
+            "description": "Where the error occurred, e.g. 'body.items[3].tags' or 'path.thing-id'"
+          },
+          {
+            "name": "message",
+            "description": "Error message text"
+          },
+          {
+            "name": "value",
+            "description": "The value at the given location"
+          }
+        ]
+      },
+      {
+        "name": "ErrorModel",
+        "kind": "model",
+        "description": "Typed representation of the `ErrorModel` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "detail",
+            "description": "A human-readable explanation specific to this occurrence of the problem."
+          },
+          {
+            "name": "errors",
+            "description": "Optional list of individual error details"
+          },
+          {
+            "name": "instance",
+            "description": "A URI reference that identifies the specific occurrence of the problem."
+          },
+          {
+            "name": "status",
+            "description": "HTTP status code"
+          },
+          {
+            "name": "title",
+            "description": "A short, human-readable summary of the problem type. This value should not change between occurrences of the error."
+          },
+          {
+            "name": "type",
+            "description": "A URI reference to human-readable documentation for the error."
+          }
+        ]
+      },
+      {
+        "name": "ExpireApiKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ExpireApiKeyOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "ExpireApiKeyRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `ExpireApiKeyRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "id",
+            "description": "Optional `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "prefix",
+            "description": "Optional `string` value serialized in the `prefix` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ExpireNodeRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `ExpireNodeRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "disableExpiry",
+            "description": "Optional `boolean` value serialized in the `disableExpiry` wire field."
+          },
+          {
+            "name": "expiry",
+            "description": "Optional `date-time`-formatted value serialized in the `expiry` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ExpirePreAuthKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ExpirePreAuthKeyOutputBody` API schema.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "ExpirePreAuthKeyRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `ExpirePreAuthKeyRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "id",
+            "description": "Optional `uint64`-formatted value serialized in the `id` wire field."
+          }
+        ]
+      },
+      {
+        "name": "HealthResponseBody",
+        "kind": "model",
+        "description": "Typed representation of the `HealthResponseBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "databaseConnectivity",
+            "description": "Required `boolean` value serialized in the `databaseConnectivity` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ListApiKeysOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ListApiKeysOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "apiKeys",
+            "description": "Required array value serialized in the `apiKeys` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ListNodesOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ListNodesOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "nodes",
+            "description": "Required array value serialized in the `nodes` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ListPreAuthKeysOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ListPreAuthKeysOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "preAuthKeys",
+            "description": "Required array value serialized in the `preAuthKeys` wire field."
+          }
+        ]
+      },
+      {
+        "name": "ListUsersOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `ListUsersOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "users",
+            "description": "Required array value serialized in the `users` wire field."
+          }
+        ]
+      },
+      {
+        "name": "Node",
+        "kind": "model",
+        "description": "Typed representation of the `Node` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "approvedRoutes",
+            "description": "Required array value serialized in the `approvedRoutes` wire field."
+          },
+          {
+            "name": "availableRoutes",
+            "description": "Required array value serialized in the `availableRoutes` wire field."
+          },
+          {
+            "name": "createdAt",
+            "description": "Required `date-time`-formatted value serialized in the `createdAt` wire field."
+          },
+          {
+            "name": "discoKey",
+            "description": "Required `string` value serialized in the `discoKey` wire field."
+          },
+          {
+            "name": "expiry",
+            "description": "Required `date-time`-formatted value serialized in the `expiry` wire field."
+          },
+          {
+            "name": "givenName",
+            "description": "Required `string` value serialized in the `givenName` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Required `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "ipAddresses",
+            "description": "Required array value serialized in the `ipAddresses` wire field."
+          },
+          {
+            "name": "lastSeen",
+            "description": "Required `date-time`-formatted value serialized in the `lastSeen` wire field."
+          },
+          {
+            "name": "machineKey",
+            "description": "Required `string` value serialized in the `machineKey` wire field."
+          },
+          {
+            "name": "name",
+            "description": "Required `string` value serialized in the `name` wire field."
+          },
+          {
+            "name": "nodeKey",
+            "description": "Required `string` value serialized in the `nodeKey` wire field."
+          },
+          {
+            "name": "online",
+            "description": "Required `boolean` value serialized in the `online` wire field."
+          },
+          {
+            "name": "preAuthKey",
+            "description": "Required object value serialized in the `preAuthKey` wire field."
+          },
+          {
+            "name": "registerMethod",
+            "description": "Required enumerated value serialized in the `registerMethod` wire field."
+          },
+          {
+            "name": "subnetRoutes",
+            "description": "Required array value serialized in the `subnetRoutes` wire field."
+          },
+          {
+            "name": "tags",
+            "description": "Required array value serialized in the `tags` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Required object value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "NodeOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `NodeOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "node",
+            "description": "Required object value serialized in the `node` wire field."
+          }
+        ]
+      },
+      {
+        "name": "NodePreAuthKey",
+        "kind": "model",
+        "description": "Typed representation of the `NodePreAuthKey` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "aclTags",
+            "description": "Required array value serialized in the `aclTags` wire field."
+          },
+          {
+            "name": "createdAt",
+            "description": "Required `date-time`-formatted value serialized in the `createdAt` wire field."
+          },
+          {
+            "name": "ephemeral",
+            "description": "Required `boolean` value serialized in the `ephemeral` wire field."
+          },
+          {
+            "name": "expiration",
+            "description": "Required `date-time`-formatted value serialized in the `expiration` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Required `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "key",
+            "description": "Required `string` value serialized in the `key` wire field."
+          },
+          {
+            "name": "reusable",
+            "description": "Required `boolean` value serialized in the `reusable` wire field."
+          },
+          {
+            "name": "used",
+            "description": "Required `boolean` value serialized in the `used` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Required object value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "PolicyRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `PolicyRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "policy",
+            "description": "Optional `string` value serialized in the `policy` wire field."
+          }
+        ]
+      },
+      {
+        "name": "PolicyResponseBody",
+        "kind": "model",
+        "description": "Typed representation of the `PolicyResponseBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "policy",
+            "description": "Required `string` value serialized in the `policy` wire field."
+          },
+          {
+            "name": "updatedAt",
+            "description": "Required `date-time`-formatted value serialized in the `updatedAt` wire field."
+          }
+        ]
+      },
+      {
+        "name": "PreAuthKey",
+        "kind": "model",
+        "description": "Typed representation of the `PreAuthKey` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "aclTags",
+            "description": "Required array value serialized in the `aclTags` wire field."
+          },
+          {
+            "name": "createdAt",
+            "description": "Required `date-time`-formatted value serialized in the `createdAt` wire field."
+          },
+          {
+            "name": "ephemeral",
+            "description": "Required `boolean` value serialized in the `ephemeral` wire field."
+          },
+          {
+            "name": "expiration",
+            "description": "Required `date-time`-formatted value serialized in the `expiration` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Required `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "key",
+            "description": "Required `string` value serialized in the `key` wire field."
+          },
+          {
+            "name": "reusable",
+            "description": "Required `boolean` value serialized in the `reusable` wire field."
+          },
+          {
+            "name": "used",
+            "description": "Required `boolean` value serialized in the `used` wire field."
+          },
+          {
+            "name": "user",
+            "description": "Required object value serialized in the `user` wire field."
+          }
+        ]
+      },
+      {
+        "name": "PreAuthKeyOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `PreAuthKeyOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "preAuthKey",
+            "description": "Required object value serialized in the `preAuthKey` wire field."
+          }
+        ]
+      },
+      {
+        "name": "SetApprovedRoutesRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `SetApprovedRoutesRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "routes",
+            "description": "Optional array value serialized in the `routes` wire field."
+          }
+        ]
+      },
+      {
+        "name": "SetTagsRequestBody",
+        "kind": "model",
+        "description": "Typed representation of the `SetTagsRequestBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "tags",
+            "description": "Optional array value serialized in the `tags` wire field."
+          }
+        ]
+      },
+      {
+        "name": "User",
+        "kind": "model",
+        "description": "Typed representation of the `User` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "createdAt",
+            "description": "Required `date-time`-formatted value serialized in the `createdAt` wire field."
+          },
+          {
+            "name": "displayName",
+            "description": "Required `string` value serialized in the `displayName` wire field."
+          },
+          {
+            "name": "email",
+            "description": "Required `string` value serialized in the `email` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Required `uint64`-formatted value serialized in the `id` wire field."
+          },
+          {
+            "name": "name",
+            "description": "Required `string` value serialized in the `name` wire field."
+          },
+          {
+            "name": "profilePicUrl",
+            "description": "Required `string` value serialized in the `profilePicUrl` wire field."
+          },
+          {
+            "name": "provider",
+            "description": "Required `string` value serialized in the `provider` wire field."
+          },
+          {
+            "name": "providerId",
+            "description": "Required `string` value serialized in the `providerId` wire field."
+          }
+        ]
+      },
+      {
+        "name": "UserOutputBody",
+        "kind": "model",
+        "description": "Typed representation of the `UserOutputBody` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "user",
+            "description": "Required object value serialized in the `user` wire field."
+          }
+        ]
+      }
+    ]
+  }
+}

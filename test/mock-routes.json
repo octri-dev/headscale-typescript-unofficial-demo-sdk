@@ -1,0 +1,2936 @@
+[
+  {
+    "operationId": "expirePreAuthKey",
+    "summary": "Expires a pre-auth key. Supply its identifier in the `id` field as a uint64-formatted string when specifying which key to expire.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/preauthkey/expire",
+    "regexSource": "^/api/v1/preauthkey/expire$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 21,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 24,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "id",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "id": "id-1"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "backfillNodeIPs",
+    "summary": "Backfills IP addresses for registered nodes. Use the `confirmed` query parameter to indicate whether to confirm the operation, and review the returned `changes` list to see what was updated.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/backfillips",
+    "regexSource": "^/api/v1/node/backfillips$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "confirmed",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": false
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 20,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 10,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "changes": ["changes"]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "expireApiKey",
+    "summary": "Expires an API key. Identify the key using `id`, `prefix`, or both, according to the key details available to you. The response confirms the operation with an empty object.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/apikey/expire",
+    "regexSource": "^/api/v1/apikey/expire$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 2,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "id",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "prefix",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "id": "id-1",
+          "prefix": "prefix"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "authRegister",
+    "summary": "Registers a node through the authentication flow. Use `authId` to associate the registration with an authentication session and `user` to specify the user for the node. The response contains the registered node.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/auth/register",
+    "regexSource": "^/api/v1/auth/register$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 5,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "authId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "authId": "auth-1",
+          "user": "user"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "registerNode",
+    "summary": "Registers a node and returns its node record. Use `user` to associate the node with a user and `key` to provide a registration key when needed.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/register",
+    "regexSource": "^/api/v1/node/register$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "user",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user"
+      },
+      {
+        "wireName": "key",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "key"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 11,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "authApprove",
+    "summary": "Approves a pending authentication session. Supply the session's `authId` to identify the request you want to approve. The response confirms the operation with an empty object.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/auth/approve",
+    "regexSource": "^/api/v1/auth/approve$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 16,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 4,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "authId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "authId": "auth-1"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "checkPolicy",
+    "summary": "Validates a policy against the server's live users and nodes without saving it. Provide `policy` as a string when included; the request body is required.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/policy/check",
+    "regexSource": "^/api/v1/policy/check$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 16,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 20,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "policy",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "policy": "policy"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "authReject",
+    "summary": "Rejects a pending authentication session. Supply the session's `authId` to identify the request you want to reject. The response confirms the operation with an empty object.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/auth/reject",
+    "regexSource": "^/api/v1/auth/reject$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 6,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "authId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "authId": "auth-1"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "debugCreateNode",
+    "summary": "Creates a node for debugging purposes. Provide `name` and `user` to describe the node, and use `key` or `routes` when those values are needed for the test setup. The response contains the created node.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/debug/node",
+    "regexSource": "^/api/v1/debug/node$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 0,
+      "totalSegments": 4,
+      "staticCharacterCount": 14,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 7,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "key",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "name",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "routes",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "key": "key",
+          "name": "Example Name",
+          "routes": ["routes"],
+          "user": "user"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "setApprovedRoutes",
+    "summary": "Updates the approved routes for a node. Send the route values in the `routes` array to set which routes are approved for that node.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/{nodeId}/approve_routes",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)/approve_routes$",
+    "pathParams": ["nodeId"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 1,
+      "totalSegments": 5,
+      "staticCharacterCount": 23,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 14,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "routes",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "routes": ["routes"]
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "expireNode",
+    "summary": "Updates the expiry settings for a node. Supply `expiry` as an ISO 8601 date-time or use `disableExpiry` to specify whether expiry is disabled.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/{nodeId}/expire",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)/expire$",
+    "pathParams": ["nodeId"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 1,
+      "totalSegments": 5,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 15,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": false,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "disableExpiry",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "expiry",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "disableExpiry": false,
+          "expiry": "2024-01-01T00:00:00Z"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "setTags",
+    "summary": "Sets the tags for a node. Send the tags as an array of strings in the request body.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/{nodeId}/tags",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)/tags$",
+    "pathParams": ["nodeId"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 1,
+      "totalSegments": 5,
+      "staticCharacterCount": 13,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 17,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "tags",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "tags": ["tags"]
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "renameNode",
+    "summary": "Renames a node by setting its new name. Supply the node identifier and the new name in the path.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/node/{nodeId}/rename/{newName}",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)/rename/(?<sdkPath1>[^/]+)$",
+    "pathParams": ["nodeId", "newName"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      },
+      {
+        "wireName": "newName",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "Example Name",
+        "routeRepresentative": "sdk-route-2"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 2,
+      "totalSegments": 6,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 16,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "renameUser",
+    "summary": "Renames a user by changing the name associated with the specified identifier. Provide `oldId` as a uint64-formatted string and `newName` as a string in the path.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/user/{oldId}/rename/{newName}",
+    "regexSource": "^/api/v1/user/(?<sdkPath0>[^/]+)/rename/(?<sdkPath1>[^/]+)$",
+    "pathParams": ["oldId", "newName"],
+    "pathParameters": [
+      {
+        "wireName": "oldId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "old-1",
+        "routeRepresentative": "sdk-route-1"
+      },
+      {
+        "wireName": "newName",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "Example Name",
+        "routeRepresentative": "sdk-route-2"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 4,
+      "parameterSegments": 2,
+      "totalSegments": 6,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 28,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "deletePreAuthKey",
+    "summary": "Deletes a pre-auth key. Use the optional `id` query parameter to identify the key to delete; provide it as a uint64-formatted string when supplied.",
+    "method": "DELETE",
+    "pathTemplate": "/api/v1/preauthkey",
+    "regexSource": "^/api/v1/preauthkey$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "id-1"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 21,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "listPreAuthKeys",
+    "summary": "Lists the pre-auth keys configured on the server. Use this operation to retrieve each key's user, key value, expiration, usage state, and ACL tags.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/preauthkey",
+    "regexSource": "^/api/v1/preauthkey$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 22,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "preAuthKeys": [
+            {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            }
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "createPreAuthKey",
+    "summary": "Creates a pre-auth key for a user. Configure the key with fields such as `user`, `expiration`, `reusable`, `ephemeral`, and `aclTags`; `user` is a uint64-formatted string and `expiration` is a date-time.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/preauthkey",
+    "regexSource": "^/api/v1/preauthkey$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 23,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "aclTags",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "ephemeral",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "expiration",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "reusable",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "user",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "aclTags": ["aclTags"],
+          "ephemeral": false,
+          "expiration": "2024-01-01T00:00:00Z",
+          "reusable": false,
+          "user": "user"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "preAuthKey": {
+            "aclTags": ["aclTags"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "ephemeral": false,
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "key": "key",
+            "reusable": false,
+            "used": false,
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "listApiKeys",
+    "summary": "Lists the API keys available to the authenticated user. Review each key's identifier, prefix, expiration, creation time, and last-seen time to manage existing credentials.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/apikey",
+    "regexSource": "^/api/v1/apikey$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 0,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "apiKeys": [
+            {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "lastSeen": "2024-01-01T00:00:00Z",
+              "prefix": "prefix"
+            }
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "createApiKey",
+    "summary": "Creates a new API key. You can provide `expiration` as a date-time value or omit it if you do not want to specify an expiration. The response contains the generated key in `apiKey`.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/apikey",
+    "regexSource": "^/api/v1/apikey$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 1,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "expiration",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "expiration": "2024-01-01T00:00:00Z"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "apiKey": "apiKey"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "health",
+    "summary": "Reports the server's health, including database connectivity. Read `databaseConnectivity` to determine whether the database connection is available.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/health",
+    "regexSource": "^/api/v1/health$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 8,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "databaseConnectivity": false
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getPolicy",
+    "summary": "Retrieves the current policy. The response includes the policy text and the time it was last updated.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/policy",
+    "regexSource": "^/api/v1/policy$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 18,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "policy": "policy",
+          "updatedAt": "2024-01-01T00:00:00Z"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "setPolicy",
+    "summary": "Replaces the current policy with the policy value supplied in the request body. Include the policy text in `policy`; the response provides the saved policy and its update time.",
+    "method": "PUT",
+    "pathTemplate": "/api/v1/policy",
+    "regexSource": "^/api/v1/policy$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 19,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "policy",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "policy": "policy"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "policy": "policy",
+          "updatedAt": "2024-01-01T00:00:00Z"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "listNodes",
+    "summary": "Lists nodes managed by the service. Supply `user` to filter the results to nodes associated with that user; omit it to list nodes without a user filter.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/node",
+    "regexSource": "^/api/v1/node$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "user",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 9,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "nodes": [
+            {
+              "approvedRoutes": ["approvedRoutes"],
+              "availableRoutes": ["availableRoutes"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "discoKey": "discoKey",
+              "expiry": "2024-01-01T00:00:00Z",
+              "givenName": "Example Name",
+              "id": "id-1",
+              "ipAddresses": ["ipAddresses"],
+              "lastSeen": "2024-01-01T00:00:00Z",
+              "machineKey": "machineKey",
+              "name": "Example Name",
+              "nodeKey": "nodeKey",
+              "online": false,
+              "preAuthKey": {
+                "aclTags": ["aclTags"],
+                "createdAt": "2024-01-01T00:00:00Z",
+                "ephemeral": false,
+                "expiration": "2024-01-01T00:00:00Z",
+                "id": "id-1",
+                "key": "key",
+                "reusable": false,
+                "used": false,
+                "user": {
+                  "createdAt": "2024-01-01T00:00:00Z",
+                  "displayName": "Example Name",
+                  "email": "user@example.com",
+                  "id": "id-1",
+                  "name": "Example Name",
+                  "profilePicUrl": "https://example.com",
+                  "provider": "provider",
+                  "providerId": "provider-1"
+                }
+              },
+              "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+              "subnetRoutes": ["subnetRoutes"],
+              "tags": ["tags"],
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            }
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "listUsers",
+    "summary": "Lists users, with optional filters for user identifier, name, or email. Supply `id` as a uint64-formatted string when filtering by identifier; `name` and `email` are string filters.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/user",
+    "regexSource": "^/api/v1/user$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "id-1"
+      },
+      {
+        "wireName": "name",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "Example Name"
+      },
+      {
+        "wireName": "email",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "user@example.com"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 25,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "users": [
+            {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "createUser",
+    "summary": "Creates a user record. You can provide `name`, `displayName`, `email`, and `pictureUrl`; all defined fields are strings and none is marked as required.",
+    "method": "POST",
+    "pathTemplate": "/api/v1/user",
+    "regexSource": "^/api/v1/user$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 26,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": true,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "displayName",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "email",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "name",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "pictureUrl",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "displayName": "Example Name",
+          "email": "user@example.com",
+          "name": "Example Name",
+          "pictureUrl": "https://example.com"
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "deleteApiKey",
+    "summary": "Deletes an API key selected by its prefix. You can also supply `id` as a uint64-formatted string to further identify the key. The response confirms the operation with an empty object.",
+    "method": "DELETE",
+    "pathTemplate": "/api/v1/apikey/{prefix}",
+    "regexSource": "^/api/v1/apikey/(?<sdkPath0>[^/]+)$",
+    "pathParams": ["prefix"],
+    "pathParameters": [
+      {
+        "wireName": "prefix",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "prefix",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "id-1"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 11,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 3,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "deleteNode",
+    "summary": "Deletes a node identified by its ID. Supply `nodeId` as an unsigned 64-bit integer value to identify the node to remove.",
+    "method": "DELETE",
+    "pathTemplate": "/api/v1/node/{nodeId}",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)$",
+    "pathParams": ["nodeId"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 12,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getNode",
+    "summary": "Retrieves a node by its identifier. Supply `nodeId` as an unsigned 64-bit integer value to identify the node.",
+    "method": "GET",
+    "pathTemplate": "/api/v1/node/{nodeId}",
+    "regexSource": "^/api/v1/node/(?<sdkPath0>[^/]+)$",
+    "pathParams": ["nodeId"],
+    "pathParameters": [
+      {
+        "wireName": "nodeId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "node-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 13,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "node": {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "deleteUser",
+    "summary": "Deletes a user by identifier. Provide the user's `id` as a uint64-formatted string in the path.",
+    "method": "DELETE",
+    "pathTemplate": "/api/v1/user/{id}",
+    "regexSource": "^/api/v1/user/(?<sdkPath0>[^/]+)$",
+    "pathParams": ["id"],
+    "pathParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "example": "id-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 1,
+      "totalSegments": 4,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 27,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {},
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "default": [
+        {
+          "statusCode": "default",
+          "mediaType": "application/problem+json",
+          "decoderKind": "json",
+          "example": {
+            "detail": "Property foo is required but is missing.",
+            "errors": [
+              {
+                "location": "location",
+                "message": "example text",
+                "value": null
+              }
+            ],
+            "instance": "https://example.com/error-log/abc123",
+            "status": 400,
+            "title": "Bad Request",
+            "type": "https://example.com/errors/example"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  }
+]

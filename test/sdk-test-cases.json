@@ -1,0 +1,855 @@
+[
+  {
+    "id": "behavior-1",
+    "operationId": "listApiKeys",
+    "method": "GET",
+    "path": "/api/v1/apikey",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response"],
+    "parameters": [],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "apiKeys": [
+          {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "prefix": "prefix"
+          }
+        ]
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-2",
+    "operationId": "createApiKey",
+    "method": "POST",
+    "path": "/api/v1/apikey",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-request", "json-response"],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "expiration": "2024-01-01T00:00:00Z"
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "apiKey": "apiKey"
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-3",
+    "operationId": "deleteApiKey",
+    "method": "DELETE",
+    "path": "/api/v1/apikey/{prefix}",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"DELETE\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "prefix",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "prefix"
+      },
+      {
+        "name": "id",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "id-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {}
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-4",
+    "operationId": "listNodes",
+    "method": "GET",
+    "path": "/api/v1/node",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "user"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "nodes": [
+          {
+            "approvedRoutes": ["approvedRoutes"],
+            "availableRoutes": ["availableRoutes"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "discoKey": "discoKey",
+            "expiry": "2024-01-01T00:00:00Z",
+            "givenName": "Example Name",
+            "id": "id-1",
+            "ipAddresses": ["ipAddresses"],
+            "lastSeen": "2024-01-01T00:00:00Z",
+            "machineKey": "machineKey",
+            "name": "Example Name",
+            "nodeKey": "nodeKey",
+            "online": false,
+            "preAuthKey": {
+              "aclTags": ["aclTags"],
+              "createdAt": "2024-01-01T00:00:00Z",
+              "ephemeral": false,
+              "expiration": "2024-01-01T00:00:00Z",
+              "id": "id-1",
+              "key": "key",
+              "reusable": false,
+              "used": false,
+              "user": {
+                "createdAt": "2024-01-01T00:00:00Z",
+                "displayName": "Example Name",
+                "email": "user@example.com",
+                "id": "id-1",
+                "name": "Example Name",
+                "profilePicUrl": "https://example.com",
+                "provider": "provider",
+                "providerId": "provider-1"
+              }
+            },
+            "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+            "subnetRoutes": ["subnetRoutes"],
+            "tags": ["tags"],
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          }
+        ]
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-5",
+    "operationId": "backfillNodeIPs",
+    "method": "POST",
+    "path": "/api/v1/node/backfillips",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "confirmed",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": false
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "changes": ["changes"]
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-6",
+    "operationId": "registerNode",
+    "method": "POST",
+    "path": "/api/v1/node/register",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "user",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "user"
+      },
+      {
+        "name": "key",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "key"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "node": {
+          "approvedRoutes": ["approvedRoutes"],
+          "availableRoutes": ["availableRoutes"],
+          "createdAt": "2024-01-01T00:00:00Z",
+          "discoKey": "discoKey",
+          "expiry": "2024-01-01T00:00:00Z",
+          "givenName": "Example Name",
+          "id": "id-1",
+          "ipAddresses": ["ipAddresses"],
+          "lastSeen": "2024-01-01T00:00:00Z",
+          "machineKey": "machineKey",
+          "name": "Example Name",
+          "nodeKey": "nodeKey",
+          "online": false,
+          "preAuthKey": {
+            "aclTags": ["aclTags"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "ephemeral": false,
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "key": "key",
+            "reusable": false,
+            "used": false,
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          },
+          "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+          "subnetRoutes": ["subnetRoutes"],
+          "tags": ["tags"],
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-7",
+    "operationId": "deleteNode",
+    "method": "DELETE",
+    "path": "/api/v1/node/{nodeId}",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"DELETE\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "nodeId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "node-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {}
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-8",
+    "operationId": "getNode",
+    "method": "GET",
+    "path": "/api/v1/node/{nodeId}",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "nodeId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "node-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "node": {
+          "approvedRoutes": ["approvedRoutes"],
+          "availableRoutes": ["availableRoutes"],
+          "createdAt": "2024-01-01T00:00:00Z",
+          "discoKey": "discoKey",
+          "expiry": "2024-01-01T00:00:00Z",
+          "givenName": "Example Name",
+          "id": "id-1",
+          "ipAddresses": ["ipAddresses"],
+          "lastSeen": "2024-01-01T00:00:00Z",
+          "machineKey": "machineKey",
+          "name": "Example Name",
+          "nodeKey": "nodeKey",
+          "online": false,
+          "preAuthKey": {
+            "aclTags": ["aclTags"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "ephemeral": false,
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "key": "key",
+            "reusable": false,
+            "used": false,
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          },
+          "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+          "subnetRoutes": ["subnetRoutes"],
+          "tags": ["tags"],
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-9",
+    "operationId": "setApprovedRoutes",
+    "method": "POST",
+    "path": "/api/v1/node/{nodeId}/approve_routes",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-request",
+      "json-response",
+      "path-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "nodeId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "node-1"
+      }
+    ],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "routes": ["routes"]
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "node": {
+          "approvedRoutes": ["approvedRoutes"],
+          "availableRoutes": ["availableRoutes"],
+          "createdAt": "2024-01-01T00:00:00Z",
+          "discoKey": "discoKey",
+          "expiry": "2024-01-01T00:00:00Z",
+          "givenName": "Example Name",
+          "id": "id-1",
+          "ipAddresses": ["ipAddresses"],
+          "lastSeen": "2024-01-01T00:00:00Z",
+          "machineKey": "machineKey",
+          "name": "Example Name",
+          "nodeKey": "nodeKey",
+          "online": false,
+          "preAuthKey": {
+            "aclTags": ["aclTags"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "ephemeral": false,
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "key": "key",
+            "reusable": false,
+            "used": false,
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          },
+          "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+          "subnetRoutes": ["subnetRoutes"],
+          "tags": ["tags"],
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-10",
+    "operationId": "renameNode",
+    "method": "POST",
+    "path": "/api/v1/node/{nodeId}/rename/{newName}",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "path-serialization"],
+    "parameters": [
+      {
+        "name": "nodeId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "node-1"
+      },
+      {
+        "name": "newName",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "value": "Example Name"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "node": {
+          "approvedRoutes": ["approvedRoutes"],
+          "availableRoutes": ["availableRoutes"],
+          "createdAt": "2024-01-01T00:00:00Z",
+          "discoKey": "discoKey",
+          "expiry": "2024-01-01T00:00:00Z",
+          "givenName": "Example Name",
+          "id": "id-1",
+          "ipAddresses": ["ipAddresses"],
+          "lastSeen": "2024-01-01T00:00:00Z",
+          "machineKey": "machineKey",
+          "name": "Example Name",
+          "nodeKey": "nodeKey",
+          "online": false,
+          "preAuthKey": {
+            "aclTags": ["aclTags"],
+            "createdAt": "2024-01-01T00:00:00Z",
+            "ephemeral": false,
+            "expiration": "2024-01-01T00:00:00Z",
+            "id": "id-1",
+            "key": "key",
+            "reusable": false,
+            "used": false,
+            "user": {
+              "createdAt": "2024-01-01T00:00:00Z",
+              "displayName": "Example Name",
+              "email": "user@example.com",
+              "id": "id-1",
+              "name": "Example Name",
+              "profilePicUrl": "https://example.com",
+              "provider": "provider",
+              "providerId": "provider-1"
+            }
+          },
+          "registerMethod": "REGISTER_METHOD_UNSPECIFIED",
+          "subnetRoutes": ["subnetRoutes"],
+          "tags": ["tags"],
+          "user": {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-11",
+    "operationId": "setPolicy",
+    "method": "PUT",
+    "path": "/api/v1/policy",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"PUT\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-request", "json-response"],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "policy": "policy"
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "policy": "policy",
+        "updatedAt": "2024-01-01T00:00:00Z"
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-12",
+    "operationId": "deletePreAuthKey",
+    "method": "DELETE",
+    "path": "/api/v1/preauthkey",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"DELETE\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "id",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "id-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {}
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-13",
+    "operationId": "listUsers",
+    "method": "GET",
+    "path": "/api/v1/user",
+    "signature": "{\"errors\":[\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":false,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"bearer\":[]}],\"streaming\":false}",
+    "kinds": ["auth-application", "error-response", "json-response", "query-serialization"],
+    "parameters": [
+      {
+        "name": "id",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "id-1"
+      },
+      {
+        "name": "name",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "Example Name"
+      },
+      {
+        "name": "email",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": false,
+        "value": "user@example.com"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "users": [
+          {
+            "createdAt": "2024-01-01T00:00:00Z",
+            "displayName": "Example Name",
+            "email": "user@example.com",
+            "id": "id-1",
+            "name": "Example Name",
+            "profilePicUrl": "https://example.com",
+            "provider": "provider",
+            "providerId": "provider-1"
+          }
+        ]
+      }
+    },
+    "security": [
+      {
+        "bearer": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "bearer",
+        "fieldName": "bearer",
+        "scheme": {
+          "type": "http",
+          "scheme": "bearer"
+        },
+        "genericBearerFieldName": "bearer2"
+      }
+    ],
+    "pagination": null
+  }
+]
